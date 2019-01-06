@@ -1,0 +1,24 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Destination</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<ion-header>
+  <ion-nav>
+    <ion-title>Navigation</ion-title>
+  </ion-nav>
+</ion-header>
+
+<ion-content no-padding>
+  <div class="img-destination" 
+  *ngFor="let item of destinationList; let i = index" 
+  (click)="openDestinationDetails(item)">
+      <img style="position: absolute; right: 0; bottom: 0;" [src]="item.imgSrc" alt="">
+      <div class="img-fade">
+        <h4 class="img-title">
+          จ.{{item.province}}
+        </h4>
+      </div>
+  </div>
+  
+</ion-content>
