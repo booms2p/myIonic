@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
-import { DestinationDetailPage } from '../destination-detail/destination-detail.page';
+// import { NavController } from '@ionic/angular';
 import { AppService, destination } from '../app.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-destination',
@@ -11,8 +11,9 @@ import { AppService, destination } from '../app.service';
 export class DestinationPage implements OnInit {
 
   constructor(
-    public nav: NavController,
-    private service: AppService
+    // public nav: NavController,
+    private service: AppService,
+    private route: Router
     ) { }
 
   destinationList: Array<destination> = [
@@ -27,7 +28,8 @@ export class DestinationPage implements OnInit {
   }
   
   openDestinationDetails(item) {
-    this.nav.navigateForward('/destination-detail');
+    // this.nav.navigateForward('/destination-detail');
+    this.route.navigate(['/destination-detail']);
     this.service.destinationProvince = item;
   }
 

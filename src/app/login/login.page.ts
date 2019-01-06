@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { NavController } from '@ionic/angular';
+// import { NavController } from '@ionic/angular';
 import { AppService } from '../app.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,8 +12,9 @@ import { AppService } from '../app.service';
 export class LoginPage implements OnInit {
 
   constructor(
-    public nav: NavController,
-    private service: AppService
+    // public nav: NavController,
+    private service: AppService,
+    private route: Router
   ) { }
 
   userName: String;
@@ -26,7 +28,8 @@ export class LoginPage implements OnInit {
     this.msgError = '';
 
     if (this.userName && this.password) {
-      this.nav.navigateForward('/tabs/explore');
+      // this.nav.navigateForward('/tabs/explore');
+      this.route.navigate(['/tabs/explore']);
     } else {
       this.msgError = 'Please specify User Name and Password.'
     }
