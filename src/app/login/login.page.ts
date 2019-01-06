@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-// import { NavController } from '@ionic/angular';
 import { AppService } from '../app.service';
 import { Router } from '@angular/router';
 
@@ -12,7 +11,6 @@ import { Router } from '@angular/router';
 export class LoginPage implements OnInit {
 
   constructor(
-    // public nav: NavController,
     private service: AppService,
     private route: Router
   ) { }

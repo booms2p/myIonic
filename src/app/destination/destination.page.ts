@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import { NavController } from '@ionic/angular';
 import { AppService, destination } from '../app.service';
 import { Router } from '@angular/router';
 
@@ -11,7 +10,6 @@ import { Router } from '@angular/router';
 export class DestinationPage implements OnInit {
 
   constructor(
-    // public nav: NavController,
     private service: AppService,
     private route: Router
     ) { }
